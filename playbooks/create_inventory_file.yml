@@ -13,14 +13,12 @@
       state: touch
       mode: 0755
   
-  - name: "Set variables in the config file"
-    lineinfile:
-      path: /var/tmp/top-level/config_file
+  - lineinfile:
+      path: /var/tmp/{{ inventory }}/config_file
       regexp: '^DNSservers='
       line: "DNSservers={{ dns_server }}"
       
-  - name: "Set variables in the config file 2"
-    lineinfile:
-      path: /var/tmp/top-level/config_file
+  - lineinfile:
+      path: /var/tmp/{{ inventory }}/config_file
       regexp: '^location='
       line: "location={{ location }}"
