@@ -14,11 +14,11 @@
       mode: 0755
   
   - lineinfile:
-      path: /var/tmp/{{ inventory }}/config_file
+      dest: /var/tmp/{{ inventory }}/config_file
       regexp: '^DNSservers='
       line: "DNSservers={{ dns_server }}"
       
   - lineinfile:
-      path: /var/tmp/{{ inventory }}/config_file
+      dest: /var/tmp/{{ inventory }}/config_file
       regexp: '^location='
       line: "location={{ location }}"
