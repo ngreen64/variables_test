@@ -1,0 +1,8 @@
+---
+- hosts: all
+  
+- tasks:
+  - file:
+    path: /var/tmp/{{ inventory }}
+    state: directory
+    mode: 0755
