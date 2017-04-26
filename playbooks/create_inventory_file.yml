@@ -1,7 +1,7 @@
 ---
 - hosts: all
   
-- tasks:
+  tasks:
   - name: "Create upper level directory"
     file:
       path: /var/tmp/{{ inventory }}
